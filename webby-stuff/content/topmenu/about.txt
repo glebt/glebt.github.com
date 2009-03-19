@@ -1,0 +1,32 @@
+---
+title:      About
+author: Gleb Tulukin
+created_at: 2009-03-19 17:32:52.299000 -05:00
+filter:
+  - erb
+  - textile
+---
+
+h1(single-title). <%= h(@page.title) %>
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+h2. Litora Sociis
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+
+bq. Nullam mattis, odio ut tempus facilisis, metus nisl facilisis metus, auctor consectetuer felis ligula nec mauris. 
+
+Vivamus euismod. Cum sociis natoque penatibus et magnis dis parturient 
+
+h3. Litora Sociis
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+
+p(warning alert). *Warning!* This type of class will spice things up for your readers. 
+
+This is an example of a WordPress page, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many pages like this one or sub-pages as you like and manage all of your content inside
+
+p(note). *Note!* There are more subtle ways of getting your reader
+
+p(download). *Download!* just want to offer a download

@@ -18,22 +18,31 @@ filter:    erb
         <link rel="stylesheet" href="/css/coderay.css" type="text/css" />
     </head>
 
-    <body class="home not-logged-in primary-active secondary-active subsidiary-inactive">
+    <body class="home">
         <div id="body-container">
             <div id="header-container">
                 <div id="header">
-                    <h1 id="site-title"><a href="http://glebt.github.com" title="Gleb Tulukin's GitHub Page"><span>iTEclectic</span></a></h1>
-                    <h2 id="site-description"><span>Please show me your github account, blog(s), code samples...</span></h2>
+                    <div id="site-title"><a href="http://glebt.github.com" title="Gleb Tulukin's GitHub Page"><span>iTEclectic</span></a></div>
+                    <div id="site-description"><span>Please show me your github account, blog(s), code samples...</span></div>
                 </div>
             </div>
 
             <div id="navigation">
                 <div id="page-nav" class="page-nav">
-                    <ul>
-                        <li class="current_page_item"><a href="#hybrid">My Blog (kinda)</a></li>
-                        <li class="page_item page-item-2"><a href="#hybrid/?page_id=2" title="About">About Me</a></li>
-                        <li class="page_item page-item-54"><a href="#hybrid/?page_id=54" title="Showcase">Fork This Page</a></li>
-                    </ul>
+                            <ul class="xoxo categories">
+                             <%
+  				items = @pages.find(:all, 
+                         		:in_directory => "topmenu",
+                         		:recursive    => true,
+                         		:sort_by      => "title")
+
+                         	items.each do |i|
+			     %>
+                                <li class="page_item"><a href="<%= i.url %>" title="<%= i.title %>"><%= h(i.title) %></a>
+
+                             <% end %>
+
+                            </ul>
                 </div>
             </div>
 
@@ -54,37 +63,52 @@ filter:    erb
                         <div class="widget-inside">
                             <h3 class="widget-title widget-header">Skills / Experience</h3>
                             <ul class="xoxo categories">
-                                <li class="cat-item cat-item-1"><a href="#hybrid/?cat=1" title="">Rails actually</a>
-                                <li class="cat-item cat-item-1"><a href="#hybrid/?cat=1" title="">Railsless Ruby</a>
-                                <li class="cat-item cat-item-8"><a href="#hybrid/?cat=8" title="">Web Frameworks</a></li>
-                                <li class="cat-item cat-item-3"><a href="#hybrid/?cat=3" title="">Plugins/Gems I use</a></li>
-                                <li class="cat-item cat-item-7"><a href="#hybrid/?cat=7" title="">AJAX / Web 2.0</a></li>
-                                <li class="cat-item cat-item-1"><a href="#hybrid/?cat=1" title="">Git / GitHub</a>
-                                <li class="cat-item cat-item-1"><a href="#hybrid/?cat=1" title="">Parsing / Scapping</a>
-                                <li class="cat-item cat-item-1"><a href="#hybrid/?cat=1" title="">Database</a>
-                                <li class="cat-item cat-item-1"><a href="#hybrid/?cat=1" title="">Playing with big boys</a>
-                                </li>
+                             <%
+  				categories = @pages.find(:all, 
+                         		:in_directory => "categories",
+                         		:recursive    => true,
+                         		:sort_by      => "title")
+
+                         	categories.each do |cat|
+			     %>
+                                <li class="cat-item"><a href="<%= cat.url %>" title="<%= cat.title %>"><%= h(cat.title) %></a>
+
+                             <% end %>
+
                             </ul>
                         </div>
                     </div>
 
-                    <div id="hybrid-bookmarks-292801022" class="widget bookmarks widget-bookmarks">
+                    <div class="widget bookmarks widget-bookmarks">
                         <div class="widget-inside">
                             <h3 class="widget-title widget-header">My GitHub Repos</h3>
                             <ul class="xoxo blogroll">
-                                <li><a href="http://wordpress.org/development/"><span>Repo 1</span></a></li>
-                                <li><a href="http://codex.wordpress.org/"><span>Repo 2</span></a></li>
-                                <li><a href="http://wordpress.org/extend/plugins/"><span>Repo 3</span></a></li>
+                             <%
+  				repos = @pages.find(:all, 
+                         		:in_directory => "repos",
+                         		:recursive    => true,
+                         		:sort_by      => "title")
+                         	repos.each do |i|
+			     %>
+                                <li class="cat-item"><a href="<%= i.url %>" title="<%= i.title %>"><%= h(i.title) %></a>
+                             <% end %>
                             </ul>
                         </div>
                     </div>
 
-                    <div id="hybrid-bookmarks-292801022" class="widget bookmarks widget-bookmarks">
+                    <div class="widget bookmarks widget-bookmarks">
                         <div class="widget-inside">
                             <h3 class="widget-title widget-header">My Interests</h3>
                             <ul class="xoxo blogroll">
-                                <li><a href="http://wordpress.org/development/"><span>iPhone</span></a></li>
-                                <li><a href="http://codex.wordpress.org/"><span>Erlang</span></a></li>
+                             <%
+  				interests = @pages.find(:all, 
+                         		:in_directory => "interests",
+                         		:recursive    => true,
+                         		:sort_by      => "title")
+                         	interests.each do |i|
+			     %>
+                                <li class="cat-item"><a href="<%= i.url %>" title="<%= i.title %>"><%= h(i.title) %></a>
+                             <% end %>
                             </ul>
                         </div>
                     </div>
@@ -112,6 +136,17 @@ filter:    erb
                             <li class="page_item page-item-82"><a href="#hybrid/?page_id=82" title="Test"><span>Test</span></a></li></ul>
                         </div>
                     </div>
+                    
+                    <div class="widget samples widget-samples">
+                        <div class="widget-inside"><h3 class="widget-title widget-header">Samples</h3>
+                            <ul class="xoxo pages">
+                                <li class="page_item page-item-2"><a href="picture-gallery-sample-page.html" title="About"><span>picture-gallery-sample-page</span></a></li>
+                                <li class="page_item page-item-54"><a href="simple-page.html" title="Showcase"><span>Simple Page</span></a></li>
+                            	<li class="page_item page-item-82"><a href="#hybrid/?page_id=82" title="Test"><span>Test</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                  </div>
             </div>
 

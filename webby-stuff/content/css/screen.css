@@ -80,17 +80,17 @@ blockquote {
 	font-style: italic;
 	color: #444;
 	border-left: 3px solid #CADAE7;
-	}
-.post blockquote {
 	margin: 0 24px 0  0;
 	padding: 6px 0 0 24px;
 	background: url(/images/quotes.gif) no-repeat 0 0;
 	border: none;
 	}
+
 .sticky blockquote {
 	color: #f7f7f7;
 	background: url(/images/quotes-alt.gif) no-repeat 0 0;
 	}
+
 blockquote blockquote {
 	color: #555;
 	border-left: 3px solid #CADAE7;

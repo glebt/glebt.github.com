@@ -1,0 +1,27 @@
+---
+title:      <%= title %>
+created_at: <%= Time.now.to_y %>
+author: Gleb Tulukin
+filter:
+  - erb
+  - textile
+
+#TODO: change image src
+img_src: change_me.jpg
+
+#TODO: change caption. It will be html-escaped
+img_caption: Change Image Caption
+
+#Optionaly: change alignment, valid options: left, right, center
+img_align: left
+---
+
+h1. <%%= h(@page.title) %>
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+h2. Litora Sociis
+
+<div class="wp-caption align<%%=@page.img_align%>" style="width: 310px"><img src="/images/<%%= @page.img_src %>" alt="<%%= h(@page.img_caption) %>" title="<%%= @page.img_caption %>" width="300" height="225" class="size-medium" /><p class="wp-caption-text"><%%= h(@page.img_caption) %></p></div>
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
