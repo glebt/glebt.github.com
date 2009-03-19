@@ -14,10 +14,10 @@ Tags: Filters, Framework, Gravatars, Hooks, SEO, Theme Options, Three Columns, T
 */
 
 /* Get base CSS */
-@import url('library/css/18px.css');
+@import url('/css/18px.css');
 
 /* Get plugins CSS */
-@import url('library/css/plugins.css');
+@import url('/css/plugins.css');
 
 /**
 * Body
