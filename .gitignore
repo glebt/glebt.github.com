@@ -1,5 +1,7 @@
 log/*.log
 tmp/**/*
 .DS_Store
+output
 output/**/*
+nbproject
 nbproject/**/*
