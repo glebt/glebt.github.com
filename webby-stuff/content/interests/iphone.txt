@@ -1,6 +1,6 @@
 ---
 title:      iPhone
-author: Gleb Tulukin
+author:     Gleb Tulukin
 created_at: 2009-03-19 16:46:56.049000 -05:00
 filter:
   - erb
