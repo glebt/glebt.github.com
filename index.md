@@ -1,0 +1,30 @@
+---
+title: Gleb Tulukin | Senior DevOps / DevSecOps Engineer | ex-Apple, ex-Cisco
+---
+
+# Gleb T.
+
+### Senior DevOps Engineer | Cloud & AI Infrastructure
+
+18 years of experience building software and cloud infrastructure.
+
+## Current focus
+
+- Kubernetes and cloud-native infrastructure
+- AI infrastructure and agentic systems
+- Python, Go, and Rust
+
+## Selected Projects
+
+### AI & Python
+- [Photo AI project](https://github.com/glebt/your-project)
+- [Event indexing project](https://github.com/glebt/your-project)
+
+### Earlier Development
+- Ruby on Rails projects (2010)
+- Node.js projects (2010)
+
+## Links
+
+- [GitHub](https://github.com/glebt)
+- [LinkedIn](YOUR_LINKEDIN_URL)
