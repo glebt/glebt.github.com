@@ -22,6 +22,7 @@ title: Gleb Tulukin | Senior DevOps / DevSecOps Engineer | ex-Apple, ex-Cisco
 - **[jev-bench](https://github.com/glebt/jev-bench)** - Local playground to evaluate the Jev models from OpenRouter.
 - **[ai-home-lab](https://github.com/glebt/ai-home-lab)** - Bare-metal Kubernetes home lab for AI/ML infrastructure experimentation, provisioned with Ansible and fully managed via GitOps.
 
+## NVIDIA related repos
 
 ## Links
 
