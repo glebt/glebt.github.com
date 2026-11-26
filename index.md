@@ -17,6 +17,7 @@ title: Gleb Tulukin | Senior DevOps / DevSecOps Engineer | ex-Apple, ex-Cisco
 ## Selected Projects
 
 ### AI & Python
+- **[Daymark](https://github.com/glebt/daymark)** - Multi-language CLI tool (Ruby, Python, JavaScript, Go, Rust) for event filtering, featuring a Python+Rust hybrid implementation using PyO3 for native performance. Demonstrates FFI/interop and polyglot development with identical test suites across all implementations.
 - [Photo AI project](https://github.com/glebt/your-project)
 - [Event indexing project](https://github.com/glebt/your-project)
 
